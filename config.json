@@ -1,113 +1,107 @@
 {
-  "ascii": [ 
-  
-  "██╗  ██╗  █████╗  ██╗   ██╗ ███████╗ ██╗  ██╗ ██╗ ██╗  ██╗ ",
-  "██║ ██╔╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██║  ██║ ██║ ██║ ██╔╝ ",
-  "█████╔╝  ███████║ ██║   ██║ ███████╗ ███████║ ██║ █████╔╝  ",
-  "██╔═██╗  ██╔══██║ ██║   ██║ ╚════██║ ██╔══██║ ██║ ██╔═██╗  ",
-  "██║  ██╗ ██║  ██║ ╚██████╔╝ ███████║ ██║  ██║ ██║ ██║  ██╗ ",
-  "╚═╝  ╚═╝ ╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚═╝  ╚═╝ ╚═╝ ╚═╝  ╚═╝ "
-                                                    
+  "ascii": [
+    " ____    _   _   _ ____      _    ____  _   _ ",
+    "/ ___|  / \\ | | | |  _ \\    / \\  | __ )| | | |",
+    "\\___ \\ / _ \\| | | | |_) |  / _ \\ |  _ \\| |_| |",
+    " ___) / ___ \\ |_| |  _ <  / ___ \\| |_) |  _  |",
+    "|____/_/   \\_\\___/|_| \\_\\/_/   \\_\\____/|_| |_|",
+    "                                               "
   ],
-    "title": "My Portfolio",
-    "username": "user",
-    "hostname": "kaushik",
-    "password": "00000",
-    "repoLink": "https://github.com/k1rbyd/Terminal-Portfolio",
-    "social": {
-      "email": "kirbysasuke@gmail.com",
-      "github": "k1rbyd",
-      "linkedin": "-kaushik-"
-    },
-    "aboutGreeting": "Hello there! I'm Kaushik, currently an undergrad at VIT Vellore pursuing CSE",
-    "projects": [
+  "title": "Saurabh Kumar's Portfolio",
+  "username": "user",
+  "hostname": "saurabh",
+  "password": "00000",
+  "repoLink": "https://github.com/saurabh2226/Saurabh---Compiler-Portfolio",
+  "social": {
+    "email": "saurabhccs10@gmail.com",
+    "github": "saurabh2226",
+    "linkedin": "saurabh-kumar-3ab422255"
+  },
+  "aboutGreeting": "Hello there! I'm Saurabh Kumar, a B.Tech student in Electronics and Instrumentation Engineering at NIT Agartala, passionate about full-stack development and competitive programming.",
+  "projects": [
     [
-      "MacSync Chat",
-      "This Python-based chat application allows multiple Mac users to communicate with each other through a single server - hosted locally or online",
-      "https://github.com/k1rbyd/MacSync-Chat"
+      "Rocket Chat",
+      "Real-time full-stack chat application using React.js, Node.js, Socket.io, Firebase/MongoDB",
+      "https://github.com/saurabh2226/Rocket-Chat"
     ],
     [
-      "Blockz LedgerPay",
-      "Blockz simulates UPI with secure sign-up, login, transfers, live balance, and history—mimicking real-world online banking.",
-      "https://github.com/k1rbyd/Blockz-LedgerPay"
+      "Samvaad",
+      "AI-enabled video conferencing platform with React.js, Node.js, WebRTC, Socket.io, PostgreSQL",
+      "https://github.com/saurabh2226/Samvaad"
     ],
     [
-      "CoreWatch Monitoring",
-      "Real-time System Monitor built with Python, Dash & Plotly showing CPU, RAM, disk, network, battery & process stats with theme toggle.",
-      "https://github.com/k1rbyd/CoreWatch-Monitoring"
+      "SupplySync",
+      "A supply chain management system built with modern web technologies.",
+      "https://github.com/saurabh2226/SupplySync"
     ],
     [
-      "Tic Tac Toe (using RL)",
-      "An AI model that learns through reinforcement learning to become a skilled game player, engaging and improving by playing with the user",
-      "https://github.com/k1rbyd/Tic-Tac-Toe-with-RL"
+      "Apple iPhone 3D Page",
+      "Interactive 3D webpage showcasing iPhone models using WebGL or Three.js.",
+      "https://github.com/saurabh2226/Apple-Iphone-3D-Page"
     ],
     [
-      "Payout",
-      "Developed a website during my front-end internship at Paysharp, gaining hands-on experience with HTML, CSS, JS, and Bootstrap",
-      "https://github.com/k1rbyd/PayOut"
+      "Algo Scheduler",
+      "Scheduling algorithm visualizer or tool written in JavaScript/React.",
+      "https://github.com/saurabh2226/Algo-Scheduler"
     ],
     [
-      "2D Platformer Portfolio",
-      "An interactive 2D platformer that allows players to explore and engage with my portfolio by roaming and interacting with objects",
-      "https://github.com/k1rbyd/Portfolio-Game"
+      "Route Planning Project",
+      "Route optimization and planning application using algorithms and mapping APIs.",
+      "https://github.com/saurabh2226/Route-Planning-Project"
     ]
   ],
-    "contributions": [
-      [
-        "Kaggle Datasets Expert",
-        "Providing Clean and Ready-To-Use Datasets",
-        "https://www.kaggle.com/kirbysasuke"
-      ],
-      [
-        "Evolve - Game",
-        "Contributed in Game Deployment and Testing",
-        "https://github.com/pmotschmann/Evolve"
-      ]
+  "contributions": [
+    [
+      "LeetCode",
+      "Max rating 1823, solved 600+ problems",
+      "https://leetcode.com/u/saurabh0202/"
     ],
-    "achievements" : [
-      [
-        "Cisco Summer Intern '25",
-        "Selected as a Software Engineering Intern with monthly stipend to work on real-world networking and system-level projects"
-      ],
-      [
-        "SIH '24",
-        "Chosen as one of a select few teams to represent VIT at the national level"
-      ],
-      [
-        "StartUpStreet '22",
-        "Secured 2nd place for our startup idea"
-      ],
-      [
-        "Paper2Product (VIT Gravitas Event)",
-        "Emerged as Runners from a 48 hour hackathon"
-      ]
+    [
+      "Codeforces",
+      "Max rating 1500+, solved 450+ problems",
+      "https://codeforces.com/profile/saurabh_codes"
+    ]
+  ],
+  "achievements": [
+    [
+      "Flipkart Grid 6.0",
+      "Qualified for Level 3 in Software Development Track"
     ],
-      
-  
-      "colors": {
-        "background": "#1E1E1E",
-        "foreground": "#EAEAEA",
-        "banner": "#FF5C5C",
-        "border": {
-          "visible": true,
-          "color": "#FF5C5C"
-        },
-        "prompt": {
-          "default": "#A9A9A9",
-          "user": "#4BBF6B",
-          "host": "#4A90E2",
-          "input": "#4BBF6B"
-        },
-        "link": {
-          "text": "#FF5C5C",
-          "highlightColor": "#A3D1E6",
-          "highlightText": "#FFFFFF",
-          "highlightStyle": "bold"
-        },
-        "commands": {
-          "textColor": "#4BBF6B"
-        }
-      }
-  
-    
+    [
+      "Smart India Hackathon 2023",
+      "Finalists among 100+ teams at NIT Agartala"
+    ],
+    [
+      "TATA ElXSI GenAI Hackathon 2024",
+      "Achieved 3rd Rank"
+    ],
+    [
+      "JEE Main 2022",
+      "Ranked in top 5 percentile among 1.1 million students"
+    ]
+  ],
+  "colors": {
+    "background": "#1E1E1E",
+    "foreground": "#EAEAEA",
+    "banner": "#FF5C5C",
+    "border": {
+      "visible": true,
+      "color": "#FF5C5C"
+    },
+    "prompt": {
+      "default": "#A9A9A9",
+      "user": "#4BBF6B",
+      "host": "#4A90E2",
+      "input": "#4BBF6B"
+    },
+    "link": {
+      "text": "#FF5C5C",
+      "highlightColor": "#A3D1E6",
+      "highlightText": "#FFFFFF",
+      "highlightStyle": "bold"
+    },
+    "commands": {
+      "textColor": "#4BBF6B"
+    }
   }
+}

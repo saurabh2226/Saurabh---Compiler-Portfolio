@@ -6,6 +6,10 @@ import { DEFAULT } from "./commands/default";
 import { PROJECTS } from "./commands/projects";
 import { CONTRIBUTIONS } from "./commands/contributions";
 import { ACHIEVEMENTS } from './commands/achievements';
+import { EXPERIENCE } from './commands/experience';
+import { EDUCATION } from './commands/education';
+import { SKILLS } from './commands/skills';
+import { POSITIONS } from './commands/positions';
 
 
 //mutWriteLines gets deleted and reassigned
@@ -30,7 +34,7 @@ const PRE_USER = document.getElementById("pre-user");
 const HOST = document.getElementById("host");
 const USER = document.getElementById("user");
 const PROMPT = document.getElementById("prompt");
-const COMMANDS = ["help", "about", "projects","repo", "banner", "clear" , "contributions","achievements"];
+const COMMANDS = ["help", "about", "projects","repo", "banner", "clear" , "contributions","achievements", "experience", "education", "skills", "positions"];
 const HISTORY : string[] = [];
 const SUDO_PASSWORD = command.password;
 const REPO_LINK = command.repoLink;
@@ -243,6 +247,18 @@ function commandHandler(input : string) {
       }
       writeLines(ACHIEVEMENTS);
       //add stuff here
+      break;
+    case 'experience':
+      writeLines(EXPERIENCE);
+      break;
+    case 'education':
+      writeLines(EDUCATION);
+      break;
+    case 'skills':
+      writeLines(SKILLS);
+      break;
+    case 'positions':
+      writeLines(POSITIONS);
       break;
     case 'email':
       //add stuff here

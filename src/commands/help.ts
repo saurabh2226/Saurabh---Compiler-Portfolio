@@ -20,6 +20,22 @@ const helpObj = {
       "Discover my Achievements "
     ],
     [
+      "'experience'",
+      "View my professional experience"
+    ],
+    [
+      "'education'",
+      "Check out my educational background"
+    ],
+    [
+      "'skills'",
+      "See my technical skills"
+    ],
+    [
+      "'positions'",
+      "Positions of responsibility"
+    ],
+    [
       "'repo'",
       "View the Github Repository "
     ],
