@@ -12,7 +12,7 @@ const createContribution = () : string[] => {
     let link = `<a href="${ele[2]}" target="_blank">${ele[0]}</a>`
     string += SPACE.repeat(2);
     string += link;
-    string += SPACE.repeat(25 - ele[0].length);
+    string += SPACE.repeat(Math.max(2, 25 - ele[0].length));
     string += ele[1];
     contributions.push(string);
     string = '';

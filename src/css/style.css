@@ -1,42 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;600&family=Pixelify+Sans&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&family=VT323&display=swap');
 
 :root {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 200;
-  --bg: #0C0623;
-  --border: #FFADE2;
-  --text: #F8DDE5;
-  --prompt-default: #A5A7A7;
-  --prompt-1: #FE6BC9;
-  --prompt-2: #70FDFF;
+  --bg: #070B14;
+  --text: #E8F0FF;
+  --banner: #64F4AC;
+  --border: #3FA7FF;
+  --prompt-default: #B5C6E0;
+  --prompt-user: #64F4AC;
+  --prompt-host: #4DB2FF;
+  --prompt-input: #64F4AC;
+  --link: #8BD8FF;
+  --link-highlight-bg: #3FA7FF;
+  --link-highlight-text: #061122;
+  --command: #64F4AC;
+  --keys: #64F4AC;
 }
 
-@keyframes typing {
+@keyframes reveal {
   from {
-    width: 0
+    opacity: 0;
+    transform: translateY(4px);
   }
-
   to {
-    width: 100%
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+@keyframes scan {
+  from { transform: translateY(-50%); }
+  to { transform: translateY(50%); }
 }
 
 html,
 body {
   color: var(--text);
-  background-color: var(--bg);
+  background: radial-gradient(circle at 20% -10%, #13366B, transparent 42%),
+              radial-gradient(circle at 90% 110%, #19443D, transparent 35%),
+              var(--bg);
   height: 100%;
   font-size: 16px;
-  display: block;
 }
 
 html {
-  overflow: auto;
+  overflow: hidden;
 }
 
 body {
+  font-family: 'IBM Plex Mono', monospace;
   padding: 16px;
   box-sizing: border-box;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+  background-size: 100% 3px;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.06), transparent);
+  animation: scan 7s linear infinite;
 }
 
 main {
@@ -44,9 +77,11 @@ main {
   box-sizing: border-box;
   height: 100%;
   border: var(--border) solid 2px;
-  border-radius: 2px;
+  border-radius: 10px;
   overflow-y: auto;
   overflow-x: hidden;
+  box-shadow: 0 0 0 1px rgba(98, 176, 255, 0.2), 0 24px 50px rgba(2, 8, 20, 0.55);
+  backdrop-filter: blur(1px);
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -56,110 +91,93 @@ main::-webkit-scrollbar {
 }
 
 p {
-  display: block;
-  line-height: 22px;
-  animation: typing 0.5s steps(30, end);
-  white-space: nowrap;
-  overflow: hidden;
+  line-height: 1.5;
+  animation: reveal 0.35s ease;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 div {
-  line-height: 22px;
-}
-
-@font-face {
-  font-family: ascii;
-  src: url("./font/IBMPlexMono-Thin.ttf")
+  line-height: 1.5;
 }
 
 pre {
   margin: 0;
   padding: 0;
-  line-height: 20px !important;
-  color: #FF9951;
-  font-family: "ascii", monospace;
+  line-height: 1.2 !important;
+  color: var(--banner);
+  font-family: "Space Grotesk", "IBM Plex Mono", monospace;
+  font-size: 0.95rem;
 }
 
 input {
   font-family: 'IBM Plex Mono', monospace;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   border: none;
   resize: none;
   outline: none;
   font-size: 16px;
-  color: #FF7685;
+  color: var(--prompt-input);
   caret-color: var(--prompt-default);
-  width: 50%;
+  width: min(76ch, 74%);
+  background: transparent;
 }
 
 a {
-  color: #B6AAEE;
+  color: var(--link);
+  text-underline-offset: 2px;
 }
 
 a:hover {
-  background-color: var(--border);
-  color: var(--bg);
+  background-color: var(--link-highlight-bg);
+  color: var(--link-highlight-text);
 }
 
 #bars {
-  font-family: 'Pixelify Sans', sans-serif;
-  font-size: 20px;
-  position: -webkit-sticky;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px;
   position: sticky;
   width: 100%;
   top: 0;
-  background-color: var(--bg);
+  background-color: color-mix(in srgb, var(--bg) 85%, black 15%);
+  z-index: 10;
 }
 
 #bar-1 {
-  height: 36px;
-  background-color: var(--border);
-  color: var(--bg);
-  line-height: 36px;
-  padding-left: 10px;
+  height: 40px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--border) 88%, black 12%), var(--banner));
+  color: color-mix(in srgb, var(--bg) 84%, black 16%);
+  line-height: 40px;
+  padding-inline: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 
-#bar-2 {
-  height: 4px;
-  background-color: var(--border);
-  margin-top: 1px;
-}
-
-#bar-3 {
-  height: 3px;
-  background-color: var(--border);
-  margin-top: 2px;
-}
-
-#bar-4 {
-  height: 2px;
-  background-color: var(--border);
-  margin-top: 3px;
-}
-
-
+#bar-2,
+#bar-3,
+#bar-4,
 #bar-5 {
-  height: 1px;
-  background-color: var(--border);
-  margin-top: 4px;
+  background: var(--border);
+}
+
+#bar-2 { height: 4px; margin-top: 1px; opacity: 0.9; }
+#bar-3 { height: 3px; margin-top: 2px; opacity: 0.8; }
+#bar-4 { height: 2px; margin-top: 3px; opacity: 0.7; }
+#bar-5 { height: 1px; margin-top: 4px; opacity: 0.6; }
+
+#terminal,
+#input-line {
+  margin-left: 18px;
 }
 
 #terminal {
-  margin-left: 20px;
-}
-
-#input-line {
-  margin-left: 20px;
-  overflow-x: hidden;
-  width: 100%;
+  margin-top: 10px;
 }
 
 .command {
-  text-shadow:
-    0 0 7px #fff,
-    0 0 151px var(--border);
-  color: #FD9BDB;
+  color: var(--command);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--command) 35%, transparent 65%);
 }
 
 .output {
@@ -167,63 +185,59 @@ a:hover {
 }
 
 .keys {
-  color: #FF9951;
-  font-weight: 400;
+  color: var(--keys);
+  font-weight: 500;
 }
 
-@media (max-width: 600px) {
+#prompt {
+  color: var(--prompt-default);
+}
+
+#pre-user,
+#user {
+  color: var(--prompt-user);
+}
+
+#pre-host,
+#host {
+  color: var(--prompt-host);
+}
+
+@media (max-width: 700px) {
   body {
-    font-size: 10px;
-    padding: 2px;
+    font-size: 13px;
+    padding: 8px;
     font-weight: 300;
   }
 
   input {
-    font-size: 10px;
+    font-size: 13px;
+    width: 68%;
   }
 
-  p {
-    line-height: 14px;
+  p,
+  div {
+    line-height: 1.45;
   }
 
   pre {
-    line-height: 12px !important;
-    font-size: 9px;
+    line-height: 1.2 !important;
+    font-size: 8px;
   }
 
   main {
     border-width: 1px;
+    border-radius: 8px;
   }
 
-  div {
-    line-height: 14px;
+  #bar-1 {
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
   }
 
-  #terminal {
-    margin-left: 8px;
-  }
-
+  #terminal,
   #input-line {
-    margin-left: 8px;
+    margin-left: 10px;
   }
-}
- 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-#cursor{
-  display: inline-block;
-  font-size : 18px;
-  color : orangered;
-  background-color: var(--prompt-default);
 }

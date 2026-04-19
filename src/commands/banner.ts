@@ -18,8 +18,9 @@ const createBanner = () : string[] => {
     banner.push(eleToPush);
   });  
   banner.push("<br>");
-  banner.push("Welcome To My Portofolio");
+  banner.push("Welcome to my portfolio terminal.");
   banner.push("Type <span class='command'>'help'</span> for a list of all available commands.");
+  banner.push("Try <span class='command'>'summary'</span>, <span class='command'>'projects'</span>, and <span class='command'>'contact'</span> to start.");
   banner.push(`Type <span class='command'>'repo'</span> to view the GitHub repository or click <a href='${command.repoLink}' target='_blank'>here</a>.`);
   banner.push("<br>");
   return banner;

@@ -4,9 +4,10 @@ Welcome to my Terminal Based Portfolio! This project showcases my skills and pro
 
 ## Features
 
-- Navigate through my projects and skills
-- View descriptions and links to completed projects
-- Easy contact information access
+- Interactive terminal-style portfolio with keyboard navigation
+- Rich command system with sections for projects, experience, achievements, and profiles
+- Built-in themes (`default`, `matrix`, `amber`) for different visual styles
+- Helpful shell-like utilities such as command history, autocomplete, and command suggestions
 
 ## Technologies Used
 
@@ -37,12 +38,23 @@ Welcome to my Terminal Based Portfolio! This project showcases my skills and pro
 Use the following commands to explore:
 
 - `about`: Curious about the creator
-- `projects`: Maybe there's something interesting 
-- `contributions`: Display My Contributions
-- `achievements`: Discover my Achievements
-- `contact`: Get my contact info
+- `summary`: Quick snapshot of profile and strengths
+- `projects`: Maybe there's something interesting
+- `contributions`: Display my coding profiles
+- `achievements`: Discover my achievements
+- `experience`: Professional experience
+- `education`: Educational background
+- `skills`: Technical skill set
+- `positions`: Leadership and responsibilities
+- `now`: Current learning focus
+- `contact`: Get contact and platform links
+- `history`: See recently executed commands
+- `whoami`: Profile identity in shell style
+- `date`: Show current local date and time
+- `theme <name>`: Switch theme (`default`, `matrix`, `amber`)
+- `echo <text>`: Print custom text
 - `repo`: View the Github Repository
-- `banner`:  Display the banner
+- `banner`: Display the banner
 - `clear`: Clear the terminal
   
 ## License

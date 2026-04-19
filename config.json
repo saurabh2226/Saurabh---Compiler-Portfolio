@@ -8,16 +8,32 @@
     "                                               "
   ],
   "title": "Saurabh Kumar's Portfolio",
+  "subtitle": "Full-Stack Engineer | Problem Solver | Builder",
   "username": "user",
   "hostname": "saurabh",
   "password": "00000",
   "repoLink": "https://github.com/saurabh2226/Saurabh---Compiler-Portfolio",
+  "resumeLink": "https://github.com/saurabh2226",
+  "location": "Bengaluru, India",
+  "availability": "Open to SDE and full-stack opportunities",
   "social": {
     "email": "saurabhccs10@gmail.com",
     "github": "saurabh2226",
-    "linkedin": "saurabh-kumar-3ab422255"
+    "linkedin": "saurabh-kumar-3ab422255",
+    "leetcode": "saurabh0202",
+    "codeforces": "saurabh_codes"
   },
   "aboutGreeting": "Hello there! I'm Saurabh Kumar, a B.Tech student in Electronics and Instrumentation Engineering at NIT Agartala, passionate about full-stack development and competitive programming.",
+  "highlights": [
+    "Built and shipped multiple full-stack projects with real-time systems and role-based auth.",
+    "Mentored 100+ learners in DSA and web development with measurable learning gains.",
+    "Strong hands-on experience across React, Node.js, Express, PostgreSQL and MongoDB."
+  ],
+  "currentlyLearning": [
+    "System design for large-scale backend applications",
+    "Performance optimization in React and Node.js",
+    "Distributed data systems and event-driven architecture"
+  ],
   "projects": [
     [
       "Rocket Chat",
@@ -81,27 +97,27 @@
     ]
   ],
   "colors": {
-    "background": "#1E1E1E",
-    "foreground": "#EAEAEA",
-    "banner": "#FF5C5C",
+    "background": "#070B14",
+    "foreground": "#E8F0FF",
+    "banner": "#64F4AC",
     "border": {
       "visible": true,
-      "color": "#FF5C5C"
+      "color": "#3FA7FF"
     },
     "prompt": {
-      "default": "#A9A9A9",
-      "user": "#4BBF6B",
-      "host": "#4A90E2",
-      "input": "#4BBF6B"
+      "default": "#B5C6E0",
+      "user": "#64F4AC",
+      "host": "#4DB2FF",
+      "input": "#64F4AC"
     },
     "link": {
-      "text": "#FF5C5C",
-      "highlightColor": "#A3D1E6",
-      "highlightText": "#FFFFFF",
+      "text": "#8BD8FF",
+      "highlightColor": "#3FA7FF",
+      "highlightText": "#061122",
       "highlightStyle": "bold"
     },
     "commands": {
-      "textColor": "#4BBF6B"
+      "textColor": "#64F4AC"
     }
   }
 }
