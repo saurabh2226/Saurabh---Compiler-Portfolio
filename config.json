@@ -31,12 +31,12 @@
     ],
     [
       "Sigmora",
-      "Sigmora project repository.",
+      "Full-stack web application with a Node.js backend (Express), MongoDB + MySQL database, JWT-based auth, RESTful APIs and real-time features using Socket.io. Containerized with Docker and configured for CI using GitHub Actions.",
       "https://github.com/saurabh2226/Sigmora"
     ],
     [
       "Sigverse",
-      "Learning Management System (LMS) built with web technologies.",
+      "Learning Management System (LMS) featuring a React + Javascript frontend, Node.js (Express) backend, MongoDB with Mongoose, REST APIs, role-based authentication (JWT), file uploads, and Docker deployment; designed for extensible course and user management.",
       "https://github.com/saurabh2226/Sigverse---LMS-System"
     ],
     [
