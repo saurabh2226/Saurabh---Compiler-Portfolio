@@ -8,7 +8,7 @@
     "                                               "
   ],
   "title": "Saurabh Kumar's Portfolio",
-  "subtitle": "Full-Stack Engineer | Problem Solver | Builder",
+  "subtitle": "Full-Stack Engineer | Backend Systems | Production Mindset",
   "username": "user",
   "hostname": "saurabh",
   "password": "00000",
@@ -35,6 +35,12 @@
     "Distributed data systems and event-driven architecture"
   ],
   "projects": [
+    [
+      "AppointEase",
+      "AI-powered appointment scheduling platform with automated booking, real-time slot availability, and calendar-based schedule management. Implemented RESTful APIs, JWT authentication, role-based access control, and MySQL-backed appointment workflows using Node.js and Express.js. Integrated AI-assisted scheduling, real-time notifications, and responsive dashboards. Tech Stack: React.js, Node.js, Express.js, MySQL, JWT, Socket.IO, Docker, REST APIs, HTML, CSS, JavaScript.",
+      "https://github.com/saurabh2226/AppointEase",
+      "https://appointease-five.vercel.app/"
+    ],
     [
       "Rocket Chat",
       "Real-time full-stack chat application using React.js, Node.js, Socket.io, Firebase/MongoDB",
@@ -97,27 +103,27 @@
     ]
   ],
   "colors": {
-    "background": "#070B14",
-    "foreground": "#E8F0FF",
-    "banner": "#64F4AC",
+    "background": "#07090D",
+    "foreground": "#F5F5F5",
+    "banner": "#F43F5E",
     "border": {
       "visible": true,
-      "color": "#3FA7FF"
+      "color": "#7F1D1D"
     },
     "prompt": {
-      "default": "#B5C6E0",
-      "user": "#64F4AC",
-      "host": "#4DB2FF",
-      "input": "#64F4AC"
+      "default": "#CBD5E1",
+      "user": "#FDA4AF",
+      "host": "#FB7185",
+      "input": "#FECDD3"
     },
     "link": {
-      "text": "#8BD8FF",
-      "highlightColor": "#3FA7FF",
-      "highlightText": "#061122",
+      "text": "#FB7185",
+      "highlightColor": "#7F1D1D",
+      "highlightText": "#FFF1F2",
       "highlightStyle": "bold"
     },
     "commands": {
-      "textColor": "#64F4AC"
+      "textColor": "#F43F5E"
     }
   }
 }

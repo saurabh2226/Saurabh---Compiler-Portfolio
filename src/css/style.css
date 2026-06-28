@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&family=VT323&display=swap');
 
 :root {
-  --bg: #070B14;
-  --text: #E8F0FF;
-  --banner: #64F4AC;
-  --border: #3FA7FF;
-  --prompt-default: #B5C6E0;
-  --prompt-user: #64F4AC;
-  --prompt-host: #4DB2FF;
-  --prompt-input: #64F4AC;
-  --link: #8BD8FF;
-  --link-highlight-bg: #3FA7FF;
-  --link-highlight-text: #061122;
-  --command: #64F4AC;
-  --keys: #64F4AC;
+  --bg: #07090D;
+  --text: #F5F5F5;
+  --banner: #F43F5E;
+  --border: #7F1D1D;
+  --prompt-default: #CBD5E1;
+  --prompt-user: #FDA4AF;
+  --prompt-host: #FB7185;
+  --prompt-input: #FECDD3;
+  --link: #FB7185;
+  --link-highlight-bg: #7F1D1D;
+  --link-highlight-text: #FFF1F2;
+  --command: #F43F5E;
+  --keys: #FCA5A5;
 }
 
 @keyframes reveal {
@@ -51,6 +51,11 @@ body {
   padding: 16px;
   box-sizing: border-box;
   position: relative;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(244, 63, 94, 0.18), transparent 30%),
+    radial-gradient(circle at 85% 110%, rgba(127, 29, 29, 0.22), transparent 28%),
+    linear-gradient(180deg, #05070A 0%, #07090D 48%, #050609 100%);
 }
 
 body::before {
@@ -59,7 +64,7 @@ body::before {
   inset: 0;
   pointer-events: none;
   opacity: 0.12;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+  background-image: linear-gradient(to bottom, rgba(244, 63, 94, 0.26) 1px, transparent 1px);
   background-size: 100% 3px;
 }
 
@@ -68,7 +73,7 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.06), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(255, 99, 132, 0.04), transparent);
   animation: scan 7s linear infinite;
 }
 
@@ -76,14 +81,18 @@ main {
   display: block;
   box-sizing: border-box;
   height: 100%;
-  border: var(--border) solid 2px;
-  border-radius: 10px;
+  border: 1px solid rgba(244, 63, 94, 0.38);
+  border-radius: 14px;
   overflow-y: auto;
   overflow-x: hidden;
-  box-shadow: 0 0 0 1px rgba(98, 176, 255, 0.2), 0 24px 50px rgba(2, 8, 20, 0.55);
-  backdrop-filter: blur(1px);
+  box-shadow:
+    0 0 0 1px rgba(244, 63, 94, 0.12),
+    0 16px 60px rgba(2, 6, 23, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
   scrollbar-width: none;
   -ms-overflow-style: none;
+  background: linear-gradient(180deg, rgba(10, 12, 18, 0.92), rgba(6, 8, 12, 0.98));
 }
 
 main::-webkit-scrollbar {
@@ -127,6 +136,7 @@ input {
 a {
   color: var(--link);
   text-underline-offset: 2px;
+  transition: color 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
 }
 
 a:hover {
@@ -140,25 +150,27 @@ a:hover {
   position: sticky;
   width: 100%;
   top: 0;
-  background-color: color-mix(in srgb, var(--bg) 85%, black 15%);
+  background-color: color-mix(in srgb, var(--bg) 88%, black 12%);
   z-index: 10;
 }
 
 #bar-1 {
   height: 40px;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--border) 88%, black 12%), var(--banner));
-  color: color-mix(in srgb, var(--bg) 84%, black 16%);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--border) 76%, black 24%), color-mix(in srgb, var(--banner) 88%, black 12%));
+  color: #FFF1F2;
   line-height: 40px;
   padding-inline: 10px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.82rem;
 }
 
 #bar-2,
 #bar-3,
 #bar-4,
 #bar-5 {
-  background: var(--border);
+  background: linear-gradient(90deg, rgba(244, 63, 94, 0.9), rgba(127, 29, 29, 0.95));
 }
 
 #bar-2 { height: 4px; margin-top: 1px; opacity: 0.9; }
@@ -177,7 +189,7 @@ a:hover {
 
 .command {
   color: var(--command);
-  text-shadow: 0 0 10px color-mix(in srgb, var(--command) 35%, transparent 65%);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--command) 42%, transparent 58%);
 }
 
 .output {
@@ -203,6 +215,63 @@ a:hover {
   color: var(--prompt-host);
 }
 
+.project-card {
+  display: block;
+  margin: 12px 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(15, 18, 26, 0.96), rgba(8, 10, 14, 0.98));
+  border: 1px solid rgba(244, 63, 94, 0.16);
+  box-shadow:
+    0 10px 24px rgba(2, 6, 23, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  white-space: normal;
+}
+
+.project-card--featured {
+  border-color: rgba(244, 63, 94, 0.32);
+  box-shadow:
+    0 12px 30px rgba(127, 29, 29, 0.28),
+    0 10px 24px rgba(2, 6, 23, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.project-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: #FDA4AF;
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.project-title {
+  display: block;
+  margin-bottom: 8px;
+  color: #FFF1F2;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.project-description {
+  display: block;
+  margin-bottom: 10px;
+  color: #E7E5E4;
+  line-height: 1.55;
+}
+
+.project-links {
+  display: block;
+  color: #FECACA;
+  font-size: 0.95rem;
+}
+
+.project-separator {
+  color: rgba(252, 165, 165, 0.55);
+}
+
 @media (max-width: 700px) {
   body {
     font-size: 13px;
@@ -226,14 +295,17 @@ a:hover {
   }
 
   main {
-    border-width: 1px;
-    border-radius: 8px;
+    border-radius: 12px;
   }
 
   #bar-1 {
     font-size: 12px;
     height: 34px;
     line-height: 34px;
+  }
+
+  .project-card {
+    padding: 12px 13px;
   }
 
   #terminal,

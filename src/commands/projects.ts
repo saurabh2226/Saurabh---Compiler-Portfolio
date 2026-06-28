@@ -1,27 +1,49 @@
 import command from '../../config.json' assert {type: 'json'};
 
+type ProjectEntry = [string, string, string, string?];
+
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+const buildProjectCard = (project: ProjectEntry): string => {
+  const [title, description, repoLink, liveLink] = project;
+  const safeTitle = escapeHtml(title);
+  const safeDescription = escapeHtml(description);
+  const links = [
+    `<a href="${repoLink}" target="_blank" rel="noreferrer">GitHub</a>`,
+    liveLink ? `<a href="${liveLink}" target="_blank" rel="noreferrer">Live Demo</a>` : "",
+  ].filter(Boolean).join(" <span class='project-separator'>|</span> ");
+  const label = liveLink ? "Featured Project" : "Project";
+
+  return `
+    <span class="project-card${liveLink ? " project-card--featured" : ""}">
+      <span class="project-kicker">${label}</span>
+      <span class="project-title">${safeTitle}</span>
+      <span class="project-description">${safeDescription}</span>
+      <span class="project-links">${links}</span>
+    </span>
+  `.trim();
+};
+
 const createProject = () : string[] => {
-  let string = "";
   const projects : string[] = [];
   const files = `${command.projects.length} File(s)`;
-  const SPACE = "&nbsp;";
 
-  projects.push("<br>")
-  //make sure that i can add as many porjects as i want
+  projects.push("<br>");
+  // Keep the project output compact but structured so it reads like a product portfolio.
   command.projects.forEach((ele) => {
-    let link = `<a href="${ele[2]}" target="_blank">${ele[0]}</a>`
-    string += SPACE.repeat(2);
-    string += link;
-    string += SPACE.repeat(Math.max(2, 25 - ele[0].length));
-    string += ele[1];
-    projects.push(string);
-    string = '';
+    projects.push(buildProjectCard(ele as ProjectEntry));
   });
 
   projects.push("<br>");
   projects.push(files);
   projects.push("<br>");
-  return projects
-}
+  return projects;
+};
 
 export const PROJECTS = createProject()
